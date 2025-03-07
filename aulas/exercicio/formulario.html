@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Formulario de Cadastro</h2>
+        <form action="" onsubmit="">
+
+            <!-- Criei as divs com a classe "Campo" para arrumar o problema de alinhamento no CSS -->
+            <div class="campo">
+                <label for="nome">Nome:</label>
+                <input type="text" id="txtNome" placeholder="Digite seu nome" required>
+            </div>
+            <div class="campo">
+                <label for="txtEmail">Email:</label>
+                <input type="text" id="txtEmail" placeholder="Digite seu email" required>
+            </div>
+            <div class="campo">
+                <label for="txtSenha">Senha:</label>
+                <input type="password" id="txtSenha" placeholder="Digite a sua senha" required>
+            </div>
+            <div class="campo">
+                <label for="txtConfirmar">Confirmar senha:</label>
+                <input type="password" id="txtConfirmar" placeholder="Confirme a sua senha" required>
+            </div>
+
+            <button type="submit" class="magicButton">Enviar</button>
+
+        </form>
+    </div>
+</body>
+
+</html>
