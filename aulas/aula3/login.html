@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Login</title>
     <link rel="stylesheet" href="style.css">
+    <script src="login.js"></script>
 </head>
 
 <body>
@@ -31,7 +32,7 @@
         <h2>Login</h2>
         <form>
             <div class="input-group">
-                <label for="txtUsuario">Usuario</label>
+                <label for="txtEmail">Email</label>
                 <input type="text" id ="txtUsuario" name = "txtUsuario" placeholder="Digite seu usuário" required>
             </div>
             <div class="input-group">
@@ -43,7 +44,7 @@
                 <input type="password" id ="txtSenha" name = "txtSenha" placeholder="Digite sua senha" required>
             </div>
 
-            <button type="submit">Entrar</button>
+            <button type="submit" onclick="validarLogin()">Entrar</button>
         </form>
     </div>
 </body>
