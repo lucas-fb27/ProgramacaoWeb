@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VitaSeg</title>
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+    <div class="logoCorretora">
+      <p href="">VitaSeg</p>
+      <span class="logoCorretoraText">VitaSeg</span>
+    </div>
+    <ul class="navlinks">
+      <li><a href="index.html">Página Inicial</a></li>
+      <li><a href="src/pages/sobre.html">Sobre Nós</a></li>
+      <ul class="menu">
+        <li class="submenu">
+          <a href="#">Serviços</a>
+          <ul class="submenu-itens">
+            <li><a href="/src/pages/servicos/plano-empresarial.html">Plano Empresarial</a></li>
+            <li><a href="/src/pages/servicos/plano-pf.html">Plano PF</a></li>
+            <li><a href="/src/pages/servicos/produtos.html">Principais Produtos</a></li>
+          </ul>
+        </li>
+      </ul>
+      <li><a href="/src/pages/cadastro.html">Cadastre-se</a></li>
+      <li><a href="/src/pages/corretor.html" class="loginBtn">Área do Corretor</a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="forms" class="formsHome">
+      <div class="formsContato">
+      <h2>Entre em Contato</h2>
+      <form id="formsPreenchimento">
+        <input type="text" id="nome" name="nome" placeholder="Nome" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
+        <div class="camposEndereco">
+        <input type="text" id="CEP" name="CEP" placeholder="CEP" onblur="buscarEndereco()" required>
+        <input type="text" id="numero" name="numero" placeholder="Numero" required>
+        <input type="text" id="rua" name="rua" placeholder="Rua" required>
+        <input type="text" id="bairro" name="bairro" placeholder="Bairro" required>
+        <input type="text" id="cidade" name="cidade" placeholder="Cidade" required>
+        <input type="text" id="estado" name="estado" placeholder="Estado" required>
+        </div>
+        <select required>
+          <option value="">Selecione o tipo de plano (PF/PME)</option>
+          <option value="servico2">Plano de Saúde Individual/Familiar</option>
+          <option value="servico3">Plano de Saúde Empresarial (PME)</option>
+        </select>
+        <button type="submit">Enviar</button>
+      </form>
+      <div class="redesSociais">
+        <a href="#" class="btnSocial"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="btnSocial"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="btnSocial"><i class="fab fa-linkedin"></i></a>
+      </div>
+      </div>
+    </section>
+
+    <section id="avaliacoes-section" class="avaliacoes-section">
+      <h2>Avaliações dos Clientes</h2>
+      <div class="avaliacoes-container">
+        <div class="avaliacao-card">
+          <div class="estrelas">★★★★★</div>
+          <p>"Excelente atendimento! Consegui um plano perfeito para minha família."</p>
+          <p class="avaliador">- Maria Silva</p>
+        </div>
+
+        <div class="avaliacoes-container">
+          <div class="avaliacao-card">
+            <div class="estrelas">★★★★★</div>
+            <p>"Profissionais muito atenciosos e preços competitivos."</p>
+            <p class="avaliador">- João Santos</p>
+          </div>
+
+          <div class="avaliacao-card">
+            <div class="estrelas">★★★★★</div>
+            <p>"Processo rápido e transparente. Recomendo!"</p>
+            <p class="avaliador">- Ana Oliveira</p>
+            </div>
+      </div>
+    </section>
+
+    <section id="carrosselOperadoras" class="carrosselOperadoras">
+      <h2>Operadoras Parceiras</h2>
+      <div class="carrosselContainer">
+        <button class="btnPrev">&lt</button>
+        <div class="carrosselTrajeto">
+          <div class="carrosselItem">Amil</div>
+          <div class="carrosselItem">Bradesco</div>
+          <div class="carrosselItem">Unimed</div>
+          <div class="carrosselItem">SulAmérica</div>
+          <div class="carrosselItem">NotreDame</div>
+          <div class="carrosselItem">Hapvida</div>
+          <div class="carrosselItem">Prevent Senior</div>
+          <button class="btnNext">&gt</button>
+        </div>
+        </div>
+    </section>
+
+    <section id="localizacao" class="localizacao">
+      <div id="containerLocalizao" class="containerLocalizao">
+        <h2>Localização da Corretora</h2>
+        <div id="map" style="height: 100px; width: 100;"></div>
+      </div>
+    </section>
+  </main>
+
+    <footer>
+      <div class="footerContent">
+        <div class="footerSection">
+          <h3>Contato</h3>
+          <p>Email: corretora@corretora.com</p>
+          <p>Telefone: 4002-8922</p>
+        </div>
+        <div class="footerSection">
+          <h3>Endereço</h3>
+          <p>Av. Alguma coisa</p>
+          <p>São Paulo - SP</p>
+      </div>
+      </div>
+      <div class="footerBottom">
+        <p>&copy; 2025 VitaSeg - Corretora. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+    <script src="/src/js/script.js"></script>
+</body>
+</html>
