@@ -22,7 +22,7 @@ function buscarEndereco() {
 }
 
 function initMap() {
-  const empresaLocalizacao = [-23.55052, -46.633308]; 
+  const empresaLocalizacao = [-23.669369, -46.700551]; 
 
   const map = L.map("map").setView(empresaLocalizacao, 15);
 
