@@ -1,138 +1,378 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VitaSeg</title>
-  <link rel="stylesheet" href="/src/css/style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-</head>
-
-<body>
-  <header>
-    <nav class="navbar">
-    <div class="logoCorretora">
-      <p href="">VitaSeg</p>
-      <span class="logoCorretoraText">VitaSeg</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VitaSeg</title>
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="/src/css/home.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  </head>
+  <body>
+    <div id="cookieConsentimento" class="cookieConsentimento">
+      <p>
+        Este site utiliza cookies para garantir a melhor experiência.
+        <a href="#">Saiba mais</a>.
+      </p>
+      <button id="aceitaCookies">Aceitar</button>
     </div>
-    <ul class="navlinks">
-      <li><a href="index.html">Página Inicial</a></li>
-      <li><a href="src/pages/sobre.html">Sobre Nós</a></li>
-      <ul class="menu">
-        <li class="submenu">
-          <a href="#">Serviços</a>
-          <ul class="submenu-itens">
-            <li><a href="/src/pages/servicos/plano-empresarial.html">Plano Empresarial</a></li>
-            <li><a href="/src/pages/servicos/plano-pf.html">Plano PF</a></li>
-            <li><a href="/src/pages/servicos/produtos.html">Principais Produtos</a></li>
-          </ul>
-        </li>
-      </ul>
-      <li><a href="/src/pages/cadastro.html">Cadastre-se</a></li>
-      <li><a href="/src/pages/corretor.html" class="loginBtn">Área do Corretor</a></li>
-    </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section id="forms" class="formsHome">
-      <div class="formsContato">
-      <h2>Entre em Contato</h2>
-      <form id="formsPreenchimento">
-        <input type="text" id="nome" name="nome" placeholder="Nome" required>
-        <input type="email" id="email" name="email" placeholder="Email" required>
-        <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
-        <div class="camposEndereco">
-        <input type="text" id="CEP" name="CEP" placeholder="CEP" onblur="buscarEndereco()" required>
-        <input type="text" id="numero" name="numero" placeholder="Numero" required>
-        <input type="text" id="rua" name="rua" placeholder="Rua" required>
-        <input type="text" id="bairro" name="bairro" placeholder="Bairro" required>
-        <input type="text" id="cidade" name="cidade" placeholder="Cidade" required>
-        <input type="text" id="estado" name="estado" placeholder="Estado" required>
+    <header>
+      <nav class="navbar">
+        <div class="logoCorretora">
+          <span class="logoCorretoraText"
+            ><a href="/src/index.html">VitaSeg</a></span
+          >
         </div>
-        <select required>
-          <option value="">Selecione o tipo de plano (PF/PME)</option>
-          <option value="servico2">Plano de Saúde Individual/Familiar</option>
-          <option value="servico3">Plano de Saúde Empresarial (PME)</option>
-        </select>
-        <button type="submit">Enviar</button>
-      </form>
-      <div class="redesSociais">
-        <a href="#" class="btnSocial"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" class="btnSocial"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="btnSocial"><i class="fab fa-linkedin"></i></a>
-      </div>
-      </div>
-    </section>
+        <ul class="navlinks">
+          <li><a href="/src/index.html">Página Inicial</a></li>
+          <li><a href="/src/pages/sobre.html">Sobre Nós</a></li>
+          <li class="submenu">
+            <a href="#"
+              >Serviços <i class="fa-solid fa-chevron-down submenu-arrow"></i
+            ></a>
+            <ul class="submenu-itens">
+              <li>
+                <a href="/src/pages/servicos/plano-empresarial.html"
+                  >Plano Empresarial</a
+                >
+              </li>
+              <li>
+                <a href="/src/pages/servicos/plano-pf.html"
+                  >Plano PF</a
+                >
+              </li>
+              <li>
+                <a href="/src/pages/servicos/plano-adesao.html"
+                  >Plano Adesão</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="/src/pages/cadastro.html">Cadastre-se</a></li>
+          <li>
+            <a href="/src/pages/corretor.html" class="loginBtn"
+              >Área do Corretor</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <section id="avaliacoes-section" class="avaliacoes-section">
-      <h2>Avaliações dos Clientes</h2>
-      <div class="avaliacoes-container">
-        <div class="avaliacao-card">
-          <div class="estrelas">★★★★★</div>
-          <p>"Excelente atendimento! Consegui um plano perfeito para minha família."</p>
-          <p class="avaliador">- Maria Silva</p>
+    <main>
+      <section id="formsHome" class="formsHome">
+        <div class="formsContato">
+          <h2>Entre em Contato</h2>
+          <form id="formsPreenchimento">
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Nome Completo"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              placeholder="Telefone"
+              required
+            />
+            <div class="camposEndereco">
+              <input
+                type="text"
+                id="CEP"
+                name="CEP"
+                placeholder="CEP"
+                onblur="buscarEndereco()"
+                required
+              />
+              <input
+                type="text"
+                id="numero"
+                name="numero"
+                placeholder="Numero"
+                required
+              />
+              <input
+                type="text"
+                id="rua"
+                name="rua"
+                placeholder="Rua"
+                required
+              />
+              <input
+                type="text"
+                id="bairro"
+                name="bairro"
+                placeholder="Bairro"
+                required
+              />
+              <input
+                type="text"
+                id="cidade"
+                name="cidade"
+                placeholder="Cidade"
+                required
+              />
+              <input
+                type="text"
+                id="estado"
+                name="estado"
+                placeholder="Estado"
+                required
+              />
+            </div>
+            <select name="plano" required>
+              <option value="">
+                Selecione o tipo de plano (PF/PME/Adesão)
+              </option>
+              <option value="servico1">
+                Plano de Saúde Individual/Familiar
+              </option>
+              <option value="servico2">Plano de Saúde Empresarial (PME)</option>
+              <option value="servico3">Plano de Saúde Adesão</option>
+            </select>
+            <button type="submit">Enviar</button>
+          </form>
+          <div class="redesSociais">
+            <a href="https://web.whatsapp.com" class="btnSocial"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+            <a href="https://www.instagram.com" class="btnSocial"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.linkedin.com" class="btnSocial"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
         </div>
+      </section>
 
+      <section class="sectionPorQueEscolher">
+        <div class="porQueEscolherContainer">
+          <h2 class="sectionTitulo">Por que escolher a VitaSeg?</h2>
+          <p class="sectionSubtitulo">
+            Somos especialistas em planos de saúde e oferecemos as melhores
+            soluções para cada perfil
+          </p>
+
+          <div class="gridVantagens">
+            <div class="vantagemCard">
+              <div class="iconeWrapper">
+                <i class="fa fa-shield" aria-hidden="true"></i>
+              </div>
+              <h3 class="cardTitulo">Confiança</h3>
+              <p class="cardDescricao">
+                Trabalhamos apenas com as operadoras mais respeitadas do mercado
+              </p>
+            </div>
+
+            <div class="vantagemCard">
+              <div class="iconeWrapper">
+                <i class="fa-solid fa-heart-pulse"></i>
+              </div>
+              <h3 class="cardTitulo">Especialistas</h3>
+              <p class="cardDescricao">
+                Consultores com ampla experiência no mercado de saúde
+              </p>
+            </div>
+
+            <div class="vantagemCard">
+              <div class="iconeWrapper">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <h3 class="cardTitulo">Agilidade</h3>
+              <p class="cardDescricao">
+                Processos simplificados para você ter seu plano rapidamente
+              </p>
+            </div>
+
+            <div class="vantagemCard">
+              <div class="iconeWrapper">
+                <i class="fa-solid fa-dollar-sign"></i>
+              </div>
+              <h3 class="cardTitulo">Economia</h3>
+              <p class="cardDescricao">
+                As melhores condições comerciais do mercado para você
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="avaliacoes-section" class="avaliacoes-section">
+        <h2>Avaliações dos Clientes</h2>
         <div class="avaliacoes-container">
+          <div class="avaliacao-card">
+            <div class="estrelas">★★★★★</div>
+            <p>
+              "Excelente atendimento! Consegui um plano perfeito para minha
+              família."
+            </p>
+            <p class="avaliador">- Maria Silva</p>
+          </div>
           <div class="avaliacao-card">
             <div class="estrelas">★★★★★</div>
             <p>"Profissionais muito atenciosos e preços competitivos."</p>
             <p class="avaliador">- João Santos</p>
           </div>
-
           <div class="avaliacao-card">
             <div class="estrelas">★★★★★</div>
             <p>"Processo rápido e transparente. Recomendo!"</p>
             <p class="avaliador">- Ana Oliveira</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="carrosselOperadoras" class="carrosselOperadoras">
+        <h2>Operadoras Parceiras</h2>
+        <div class="carrossel">
+          <button class="btnPrev"><</button>
+          <div class="carrosselTrajeto">
+            <div class="carrosselItem active">
+              <img src="/src/img/amil-logo.png" alt="Amil" />
             </div>
-      </div>
-    </section>
-
-    <section id="carrosselOperadoras" class="carrosselOperadoras">
-      <h2>Operadoras Parceiras</h2>
-      <div class="carrosselContainer">
-        <button class="btnPrev">&lt</button>
-        <div class="carrosselTrajeto">
-          <div class="carrosselItem">Amil</div>
-          <div class="carrosselItem">Bradesco</div>
-          <div class="carrosselItem">Unimed</div>
-          <div class="carrosselItem">SulAmérica</div>
-          <div class="carrosselItem">NotreDame</div>
-          <div class="carrosselItem">Hapvida</div>
-          <div class="carrosselItem">Prevent Senior</div>
-          <button class="btnNext">&gt</button>
+            <div class="carrosselItem">
+              <img src="/src/img/bradesco-logo.png" alt="Bradesco" />
+            </div>
+            <div class="carrosselItem">
+              <img src="/src/img/unimed-logo.png" alt="Unimed" />
+            </div>
+            <div class="carrosselItem">
+              <img
+                src="/src/img/sulamerica-logo.png"
+                alt="SulAmérica"
+              />
+            </div>
+            <div class="carrosselItem">
+              <img
+                src="/src/img/notredame-hapvida-logo.png"
+                alt="NotreDame"
+              />
+            </div>
+            <div class="carrosselItem">
+              <img src="/src/img/hapvida-logo.png" alt="Hapvida" />
+            </div>
+            <div class="carrosselItem">
+              <img
+                src="/src/img/prevent-senior-logo.png"
+                alt="Prevent Senior"
+              />
+            </div>
+            <div class="carrosselItem">
+              <img src="/src/img/porto-logo.png" alt="Porto Saúde" />
+            </div>
+          </div>
+          <button class="btnNext">></button>
         </div>
-        </div>
-    </section>
+      </section>
 
-    <section id="localizacao" class="localizacao">
-      <div id="containerLocalizao" class="containerLocalizao">
-        <h2>Localização da Corretora</h2>
-        <div id="map" style="height: 600px; width: 100;"></div>
-      </div>
-    </section>
-  </main>
-
-    <footer>
-      <div class="footerContent">
-        <div class="footerSection">
-          <h3>Contato</h3>
-          <p>Email: corretora@corretora.com</p>
-          <p>Telefone: 4002-8922</p>
+      <section id="localizacao" class="localizacao">
+        <div id="containerLocalizao" class="containerLocalizao">
+          <h2>Localização da Corretora</h2>
+          <div id="map" style="height: 500px; width: 100%"></div>
         </div>
-        <div class="footerSection">
-          <h3>Endereço</h3>
-          <p>Av. Alguma coisa</p>
-          <p>São Paulo - SP</p>
-      </div>
-      </div>
-      <div class="footerBottom">
-        <p>&copy; 2025 VitaSeg - Corretora. Todos os direitos reservados.</p>
+      </section>
+    </main>
+
+    <footer class="siteFooter">
+      <div class="footerContainer">
+        <div class="footerGrid">
+          <div class="footerColuna">
+            <h3 class="footerTitulo">VitaSeg</h3>
+            <p class="footerTexto">
+              Sua corretora de seguros de saúde, oferecendo as melhores opções
+              para você, sua família e sua empresa.
+            </p>
+          </div>
+
+          <div class="footerColuna">
+            <h3 class="footerTitulo">Links Rápidos</h3>
+            <ul class="footerListaLinks">
+              <li>
+                <a href="/src/index.html" class="footerLink"
+                  >Página Inicial</a
+                >
+              </li>
+              <li>
+                <a href="/src/pages/sobre.html" class="footerLink"
+                  >Sobre Nós</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/src/pages/servicos/plano-empresarial.html"
+                  class="footerLink"
+                  >Plano Empresarial</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/src/pages/servicos/plano-pf.html"
+                  class="footerLink"
+                  >Plano PF</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/src/pages/servicos/plano-adesao.html"
+                  class="footerLink"
+                  >Plano Adesão</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footerColuna">
+            <h3 class="footerTitulo">Contato</h3>
+            <ul class="footerListaContato">
+              <li class="footerItemContato">
+                <i class="fa-solid fa-envelope"></i>
+                <span>corretora@vitaseg.com</span>
+              </li>
+              <li class="footerItemContato">
+                <i class="fa-solid fa-phone"></i>
+                <span>4002-8922</span>
+              </li>
+              <li class="footerItemContato">
+                <i class="fa-solid fa-map-marker-alt"></i>
+                <span>Av. Eng. Eusébio Stevaux, 83 - São Paulo/SP</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footerColuna">
+            <h3 class="footerTitulo">Horário de Atendimento</h3>
+            <p class="footerTexto">Segunda a Sexta: 8h às 18h</p>
+          </div>
+        </div>
+        <div class="footerBottom">
+          <p>&copy; 2025 VitaSeg - Corretora. Todos os direitos reservados.</p>
+        </div>
       </div>
     </footer>
+
     <script src="/src/js/script.js"></script>
-</body>
+    <script src="/src/js/cookies.js"></script>
+    <script src="/src/js/viacep.js"></script>
+    <script src="/src/js/mapa.js"></script>
+    <script src="/src/js/formularioHome.js"></script>
+    <script src="/src/js/carrossel.js"></script>
+  </body>
 </html>

@@ -1,84 +1,322 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/css/style.css" />
     <link rel="stylesheet" href="/src/css/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <title>Área do Corretor</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="navbar">
-          <div class="logoCorretora">
-            <p href="">VitaSeg</p>
-            <span class="logoCorretoraText">VitaSeg</span>
-          </div>
-          <ul class="navlinks">
-            <li><a href="/src/index.html">Página Inicial</a></li>
-            <li><a href="/src/pages/sobre.html">Sobre Nós</a></li>
-            <ul class="menu">
-              <li class="submenu">
-                <a href="#">Serviços</a>
-                <ul class="submenu-itens">
-                  <li>
-                    <a href="/src/pages/servicos/plano-empresarial.html"
-                      >Plano Empresarial</a
-                    >
-                  </li>
-                  <li>
-                    <a href="/src/pages/servicos/plano-pf.html"
-                      >Plano PF</a
-                    >
-                  </li>
-                  <li>
-                    <a href="/src/pages/servicos/produtos.html"
-                      >Principais Produtos</a
-                    >
-                  </li>
-                </ul>
+      <nav class="navbar">
+        <div class="logoCorretora">
+          <span class="logoCorretoraText"
+            ><a href="/src/index.html">VitaSeg</a></span
+          >
+        </div>
+        <ul class="navlinks">
+          <li><a href="/src/index.html">Página Inicial</a></li>
+          <li><a href="/src/pages/sobre.html">Sobre Nós</a></li>
+          <li class="submenu">
+            <a href="#"
+              >Serviços <i class="fa-solid fa-chevron-down submenu-arrow"></i
+            ></a>
+            <ul class="submenu-itens">
+              <li>
+                <a href="/src/pages/servicos/plano-empresarial.html"
+                  >Plano Empresarial</a
+                >
+              </li>
+              <li>
+                <a href="/src/pages/servicos/plano-pf.html"
+                  >Plano PF</a
+                >
+              </li>
+              <li>
+                <a href="/src/pages/servicos/plano-adesao.html"
+                  >Plano Adesão</a
+                >
               </li>
             </ul>
-            <li><a href="/src/pages/cadastro.html">Cadastre-se</a></li>
-            <li>
-              <a href="/src/pages/corretor.html" class="loginBtn"
-                >Área do Corretor</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </header>
+          </li>
+          <li><a href="/src/pages/cadastro.html">Cadastre-se</a></li>
+          <li>
+            <a href="/src/pages/corretor.html" class="loginBtn"
+              >Área do Corretor</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <main>
-        <section>
-            <div class = "formsLogin">
-                <h2>Área do Corretor</h2>
-                <form class="">
-                    <input type="text" id="cpf" name="cpf" placeholder="CPF" required />
-                    <input type="email" placeholder="E-mail" required />
-                    <input type="password" placeholder="Senha" required />
-                    <button type="submit">Entrar</button>
-                </form>
+    <main class="areaCorretorPage">
+      <section class="bannerCorretor">
+        <img
+          src="/src/img/area-do-corretor-banner.jpg"
+          alt="Banner Área do Corretor"
+          class="bannerCorretorImg"
+        />
+        <div class="bannerCorretorConteudo">
+          <h1>Área do Corretor</h1>
+          <p>Acesse sua conta para gerenciar seus clientes.</p>
+        </div>
+      </section>
+
+      <section class="corretorLoginSection">
+        <div class="corretorContainer">
+          <div class="loginCard">
+            <div class="loginCardHeader">
+              <h2>Login do Corretor</h2>
+              <p>Entre com suas credenciais</p>
             </div>
-        </section>
+
+            <form class="loginForm" id="loginForm">
+              <div class="formGrupo">
+                <label for="cpf" class="formLabel">CPF</label>
+                <div class="formInputWrapper">
+                  <div class="formIcone">
+                    <i class="fa-solid fa-id-card"></i>
+                  </div>
+                  <input
+                    id="cpf"
+                    type="text"
+                    required
+                    class="formInput"
+                    placeholder="000.000.000-00"
+                  />
+                </div>
+              </div>
+
+              <div class="formGrupo">
+                <label for="email" class="formLabel">E-mail</label>
+                <div class="formInputWrapper">
+                  <div class="formIcone">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <input
+                    id="email"
+                    type="email"
+                    required
+                    class="formInput"
+                    placeholder="seu.email@exemplo.com"
+                  />
+                </div>
+              </div>
+
+              <div class="formGrupo">
+                <label for="password" class="formLabel">
+                  <span>Senha</span>
+                  <a href="#" class="formLinkEsqueceu"> Esqueceu a senha? </a>
+                </label>
+                <div class="formInputWrapper">
+                  <div class="formIcone">
+                    <i class="fa-solid fa-lock"></i>
+                  </div>
+                  <input
+                    id="senha"
+                    type="password"
+                    required
+                    class="formInput"
+                    placeholder="********"
+                  />
+                </div>
+              </div>
+
+              <div class="formGrupo">
+                <button type="submit" class="formBotao">
+                  <i class="fa-solid fa-right-to-bracket"></i>
+                  Entrar
+                </button>
+              </div>
+
+              <div class="formTextoFinal">
+                <p>
+                  Ainda não é um corretor da VitaSeg?
+                  <a
+                    href="/src/pages/cadastro.html"
+                    class="formLinkAdmin"
+                    >Cadastre-se</a
+                  >
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="corretorVantagensSection">
+        <div class="corretorContainer">
+          <div class="vantagensTituloWrapper">
+            <h2>Vantagens para Corretores VitaSeg</h2>
+            <p>
+              Oferecemos as melhores condições e ferramentas para o seu sucesso.
+            </p>
+          </div>
+
+          <div class="vantagensGrid">
+            <div class="vantagemCard">
+              <div class="vantagemIcone">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+              </div>
+              <h3>Comissões Competitivas</h3>
+              <p>
+                Oferecemos as melhores taxas do mercado, com pagamento pontual e
+                transparência total.
+              </p>
+            </div>
+            <div class="vantagemCard">
+              <div class="vantagemIcone">
+                <i class="fa-solid fa-desktop"></i>
+              </div>
+              <h3>Sistema Completo</h3>
+              <p>Plataforma digital para resgate de clientes.</p>
+            </div>
+            <div class="vantagemCard">
+              <div class="vantagemIcone">
+                <i class="fa-solid fa-headset"></i>
+              </div>
+              <h3>Suporte ao Corretor</h3>
+              <p>
+                Equipe dedicada para ajudar em dúvidas, processos e negociações
+                com as operadoras.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="modalEsqueceuSenha" class="modal-overlay">
+        <div class="modal-corpo">
+          <button class="modal-fechar-btn" aria-label="Fechar">&times;</button>
+
+          <div id="estadoEmailRedefinicao" class="modal-estado">
+            <h3 class="modal-titulo">Redefinir Senha</h3>
+            <p class="modal-texto">
+              Por favor, insira seu endereço de e-mail abaixo. Enviaremos um
+              link para você criar uma nova senha.
+            </p>
+            <div class="formGrupoModal">
+              <label for="emailRedefinicao" class="formLabelModal"
+                >E-mail:</label
+              >
+              <input
+                type="email"
+                id="emailRedefinicao"
+                class="formInputModal"
+                placeholder="seu.email@exemplo.com"
+                required
+              />
+              <div
+                id="erroEmailRedefinicao"
+                class="error-message-modal"
+                style="display: none"
+              ></div>
+            </div>
+            <button id="btnEnviarLink" class="formBotaoModal">
+              Enviar Link de Redefinição
+            </button>
+          </div>
+
+          <div
+            id="estadoConfirmacaoEnvio"
+            class="modal-estado"
+            style="display: none"
+          >
+            <h3 class="modal-titulo">Verifique seu E-mail!</h3>
+            <div class="modal-icone-confirmacao">
+              <i class="fa-solid fa-paper-plane"></i>
+            </div>
+            <p class="modal-texto-confirmacao">
+              Se uma conta com o e-mail fornecido existir, um link de
+              redefinição de senha será enviado.
+            </p>
+            <a href="#" id="linkCorrigirEmail" class="formLinkModal"
+              >Escreveu o e-mail errado?</a
+            >
+          </div>
+        </div>
+      </div>
     </main>
 
-      <footer>
-        <div class="footerContent">
-          <div class="footerSection">
-            <h3>Contato</h3>
-            <p>Email: corretora@corretora.com</p>
-            <p>Telefone: 4002-8922</p>
+    <footer class="siteFooter">
+      <div class="footerContainer">
+        <div class="footerGrid">
+          <div class="footerColuna">
+            <h3 class="footerTitulo">VitaSeg</h3>
+            <p class="footerTexto">
+              Sua corretora de seguros de saúde, oferecendo as melhores opções
+              para você, sua família e sua empresa.
+            </p>
           </div>
-          <div class="footerSection">
-            <h3>Endereço</h3>
-            <p>Av. Alguma coisa</p>
-            <p>São Paulo - SP</p>
+          <div class="footerColuna">
+            <h3 class="footerTitulo">Links Rápidos</h3>
+            <ul class="footerListaLinks">
+              <li>
+                <a href="/src/index.html" class="footerLink"
+                  >Página Inicial</a
+                >
+              </li>
+              <li>
+                <a href="/src/pages/sobre.html" class="footerLink"
+                  >Sobre Nós</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/src/pages/servicos/plano-empresarial.html"
+                  class="footerLink"
+                  >Plano Empresarial</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/src/pages/servicos/plano-pf.html"
+                  class="footerLink"
+                  >Plano PF</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/src/pages/servicos/plano-adesao.html"
+                  class="footerLink"
+                  >Plano Adesão</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footerColuna">
+            <h3 class="footerTitulo">Contato</h3>
+            <ul class="footerListaContato">
+              <li class="footerItemContato">
+                <i class="fa-solid fa-envelope"></i>
+                <span>corretora@vitaseg.com</span>
+              </li>
+              <li class="footerItemContato">
+                <i class="fa-solid fa-phone"></i>
+                <span>4002-8922</span>
+              </li>
+              <li class="footerItemContato">
+                <i class="fa-solid fa-map-marker-alt"></i>
+                <span>Av. Eng. Eusébio Stevaux, 83 - São Paulo/SP</span>
+              </li>
+            </ul>
+          </div>
+          <div class="footerColuna">
+            <h3 class="footerTitulo">Horário de Atendimento</h3>
+            <p class="footerTexto">Segunda a Sexta: 8h às 18h</p>
           </div>
         </div>
         <div class="footerBottom">
           <p>&copy; 2025 VitaSeg - Corretora. Todos os direitos reservados.</p>
         </div>
-      </footer>
-</body>
+      </div>
+    </footer>
+    <script src="/src/js/script.js"></script>
+    <script src="/src/js/corretor.js"></script>
+  </body>
 </html>

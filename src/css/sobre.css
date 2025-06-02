@@ -1,0 +1,279 @@
+.bannerSobreNos {
+  position: relative;
+  min-height: 40vh;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.bannerSobreNos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.bannerSobreNosImg {
+  width: 100%;
+  height: 100%;
+  min-height: 40vh;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.bannerSobreNosConteudo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+  width: 90%;
+  z-index: 3;
+  text-align: center;
+}
+
+.bannerSobreNosConteudo h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin: 0 0 1rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bannerSobreNosConteudo p {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sobreNosContainer {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 10rem;
+  background-color: #fff;
+}
+
+.sobreNosItem {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sobreNosItem h2 {
+  font-size: 1.8rem;
+  color: #0066cc;
+  margin-bottom: 1rem;
+}
+
+.sobreNosItem p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.sobreNosItem i {
+  font-size: 3rem;
+  color: #0066cc;
+  margin-bottom: 1rem;
+}
+
+.sobreNosItem ul {
+  list-style: none;
+}
+
+.sobreNosItem li {
+  color: #555;
+}
+
+.sobreNosItem li::marker {
+  list-style: none;
+}
+
+.historiaSection {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #ffffff;
+}
+
+.historiaContainer {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.conteudoWrapper {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.containerTitulo {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitulo {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: #0066cc;
+  margin-bottom: 1rem;
+}
+
+.divisor {
+  width: 50px;
+  height: 4px;
+  background-color: #0066cc;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+.historia-conteudo-duas-colunas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.historia-coluna-texto {
+  flex: 2;
+}
+
+.historia-coluna-imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.historia-coluna-imagem img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.textoHistoria {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #333;
+  margin-bottom: 10rem;
+}
+
+.textoHistoria p {
+  margin-bottom: 1.5rem;
+}
+
+.equipeContainer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(auto, 220px));
+  gap: 10rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  justify-content: center;
+}
+
+.equipe {
+  text-align: center;
+  padding: 2rem 0rem;
+  background-color: #f9fafb;
+}
+
+.equipe h2 {
+  font-size: 1.8rem;
+  color: #0066cc;
+  margin-bottom: 2rem;
+}
+
+.equipeItem {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 220px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.equipeItem img {
+  width: 180px;
+  height: 180px;
+  border-radius: 60%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.equipeItem h3 {
+  color: #0066cc;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.equipeItem p {
+  color: #0066cc;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.statsSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f9fafb;
+  padding: 5rem;
+  margin-bottom: 8rem;
+  text-align: center;
+  min-height: 150px;
+}
+
+.statItem {
+  color: #333;
+}
+
+.statItem i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #0066cc;
+}
+
+.statItem h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.statItem p {
+  font-size: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-style: italic;
+}

@@ -1,0 +1,351 @@
+.formsHome {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/src/img/home_image.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-top: 0;
+}
+
+.formsContato {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.formsContato h2 {
+  color: #0066cc;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.formsContato h3 {
+  color: #0066cc;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.redesSociais {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btnSocial {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btnSocial:hover {
+  transform: scale(1.1);
+}
+
+.camposEndereco {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.camposEndereco input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.sectionPorQueEscolher {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #f9fafb;
+}
+
+.porQueEscolherContainer {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.sectionTitulo {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1a237e;
+  margin-bottom: 1rem;
+}
+
+.sectionSubtitulo {
+  font-size: 1.25rem;
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 3rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gridVantagens {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vantagemCard {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease-in-out;
+}
+
+.vantagemCard:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-0.25rem);
+}
+
+.iconeWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 9999px;
+  background-color: #dbeafe;
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+.iconeWrapper i {
+  font-size: 2rem;
+}
+
+.cardTitulo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.cardDescricao {
+  color: #333;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .gridVantagens {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gridVantagens {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.avaliacoes-section {
+  padding: 2rem;
+  background-color: #fff;
+  margin: 4rem -2rem;
+  text-align: center;
+}
+
+.avaliacoes-section h2 {
+  color: #1a237e;
+  margin-bottom: 3rem;
+}
+
+.avaliacoes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.avaliacao-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.avaliacao-card p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.estrelas {
+  color: #ffd700;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.avaliador {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #666;
+}
+
+.carrosselOperadoras {
+  padding: 3rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.carrosselOperadoras h2 {
+  color: #1a237e;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.carrossel {
+  position: relative;
+  max-width: 90%;
+  margin: 0 auto;
+  height: 100px;
+}
+
+.carrosselTrajeto {
+  position: relative;
+  height: 100%;
+}
+
+.carrosselItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  color: #1a237e;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carrosselItem.active {
+  opacity: 1;
+}
+
+.btnPrev,
+.btnNext {
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btnPrev:hover,
+.btnNext:hover {
+  background-color: #3949ab;
+}
+
+.btnPrev {
+  left: -10px;
+}
+
+.btnNext {
+  right: -10px;
+}
+
+.localizacao {
+  padding: 3rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.localizacao h2 {
+  color: #1a237e;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cookieConsentimento {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #2c2c2c;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  font-size: 14px;
+}
+
+.cookieConsentimento.hidden {
+  display: none;
+}
+
+.cookieConsentimento p {
+  margin: 0;
+}
+
+.cookieConsentimento a {
+  color: #4fc3f7;
+  text-decoration: underline;
+}
+
+.cookieConsentimento button {
+  background-color: #0066cc;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cookieConsentimento button:hover {
+  background-color: #004999;
+}

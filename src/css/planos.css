@@ -1,0 +1,431 @@
+.bannerPlanos {
+  position: relative;
+  min-height: 40vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bannerPlanos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.bannerPlanos img {
+  width: 100%;
+  height: 100%;
+  min-height: 40vh;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.bannerPlanos .bannerConteudo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+  width: 100%;
+  z-index: 3;
+  text-align: center;
+}
+
+.bannerPlanos h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bannerPlanos p {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 1rem 0 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.vantagensPlanos {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8rem;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1800px;
+  margin-bottom: 1rem;
+}
+
+.vantagensPlanos .item {
+  max-width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.vantagensPlanos .item:hover {
+  transform: translateY(-0.25rem);
+}
+
+.vantagensPlanos i {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.vantagensPlanos h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.vantagensPlanos p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.principaisVantagens {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  color: #007bff;
+}
+
+.sectionTitulo {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.sectionSubtitulo {
+  font-size: 1.25rem;
+  text-align: center;
+  color: #4b5563;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectionIntro {
+  padding-top: 4rem;
+  background-color: #f9fafb;
+  padding-bottom: 1rem;
+}
+
+.introContainer {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.introTextoWrapper {
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.introTextoWrapper .sectionTitulo {
+  margin-bottom: 1.5rem;
+}
+
+.introTextoWrapper .sectionParagrafo {
+  font-size: 1.25rem;
+  color: #374151;
+  line-height: 1.75;
+}
+
+.sectionBeneficios {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #f9fafb;
+}
+
+.beneficiosTituloWrapper {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.beneficiosTituloWrapper .sectionTitulo {
+  margin-bottom: 1rem;
+}
+
+.gridBeneficios {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.beneficioCard {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.beneficioCard:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.cardTituloBeneficio {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.listaBeneficios {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listaBeneficios li + li {
+  margin-top: 0.75rem;
+}
+
+.itemBeneficio {
+  display: flex;
+  align-items: flex-start;
+}
+
+.itemBeneficio i {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #3b82f6;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  margin-top: 0.15rem;
+  text-align: center;
+}
+
+.itemBeneficio span {
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.sectionComoFunciona {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #ffffff;
+}
+
+.comoFuncionaContainer .sectionTitulo {
+  margin-bottom: 3rem;
+}
+
+.timelineWrapper {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timelineRelative {
+  position: relative;
+}
+
+.timelineLinha {
+  position: absolute;
+  left: 22px;
+  top: 2.5rem;
+  bottom: 2.5rem;
+  width: 4px;
+  background-color: #bfdbfe;
+  display: none;
+}
+
+.timelinePassos li + li,
+.passoRow + .passoRow {
+  margin-top: 3rem;
+}
+
+.passoRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.passoNumero {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2563eb;
+  color: #ffffff;
+  border-radius: 9999px;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  z-index: 10;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.passoConteudo {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.passoTitulo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.passoDescricao {
+  color: #374151;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .gridBeneficios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timelineLinha {
+    display: block;
+  }
+
+  .passoRow {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .passoNumero {
+    margin-right: 1.5rem;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .passoConteudo {
+    margin-left: 0.5rem;
+  }
+}
+
+.sectionDuvidasFrequentes {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #f9fafb;
+}
+
+.duvidasContainer {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.duvidasContainer .sectionTitulo {
+  margin-bottom: 3rem;
+  color: #007bff;
+}
+
+.accordionWrapper {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.accordionItem {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.accordionItem:last-child {
+  border-bottom: none;
+}
+
+.accordionPergunta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  transition: background-color 0.2s ease;
+}
+
+.accordionPergunta:hover {
+  background-color: #f9fafb;
+}
+
+.accordionPergunta span {
+  flex-grow: 1;
+  padding-right: 1rem;
+}
+
+.accordionIcone {
+  color: #2563eb;
+  transition: transform 0.3s ease-in-out;
+  flex-shrink: 0;
+}
+
+.accordionResposta {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+  background-color: #ffffff;
+}
+
+.accordionResposta p {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.accordionItem.active .accordionPergunta {
+  color: #2563eb;
+}
+
+.accordionItem.active .accordionIcone {
+  transform: rotate(180deg);
+}
+
+.accordionItem.active .accordionResposta {
+  max-height: 500px;
+  padding-top: 0.5rem;
+}
