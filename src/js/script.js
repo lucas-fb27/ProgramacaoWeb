@@ -32,11 +32,11 @@ function atualizaNavbar() {
     return;
   }
 
-  const cadastroLinkQuery = 'a[href="/src/pages/cadastro.html"]';
+  const cadastroLinkQuery = 'a[href="src/pages/cadastro.html"]';
   const corretorLinkQuery =
-    'a.loginBtn[href="/src/pages/corretor.html"]';
+    'a.loginBtn[href="src/pages/corretor.html"]';
   const dashboardLinkQuery =
-    'a.dashboardBtn[href="/src/pages/dashboard.html"]';
+    'a.dashboardBtn[href="src/pages/dashboard.html"]';
   const logoutLinkQuery = "a.logoutBtn";
 
   const cadastroLi = navLinks.querySelector(cadastroLinkQuery)?.closest("li");
@@ -130,6 +130,6 @@ function identificadorLogout(event) {
   localStorage.removeItem("isLoggedIn");
   localStorage.removeItem("loggedInEmail");
 
-  window.location.href = "/src/index.html";
+  window.location.href = "index.html";
 }
 document.addEventListener("DOMContentLoaded", inicializarPagina);

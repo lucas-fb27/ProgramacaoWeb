@@ -98,7 +98,7 @@ function manipularSubmitLogin(event) {
       localStorage.setItem("isLoggedIn", "true");
       localStorage.setItem("loggedInEmail", email.toLowerCase());
       setTimeout(() => {
-        window.location.href = "/src/pages/dashboard.html";
+        window.location.href = "src/pages/dashboard.html";
       }, 600);
     } else {
       mostraError("loginForm", "CPF, email ou senha incorretos");
