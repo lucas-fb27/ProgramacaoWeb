@@ -326,7 +326,7 @@ function manipularSubmitCadastro(event) {
     alert("Cadastro realizado com sucesso!");
     const formParaResetar = document.getElementById("formsPreenchimento");
     if (formParaResetar) formParaResetar.reset();
-    window.location.href = "/src/pages/corretor.html";
+    window.location.href = "src/pages/corretor.html";
   }
 }
 

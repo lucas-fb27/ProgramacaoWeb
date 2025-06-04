@@ -76,7 +76,7 @@ function atualizaNavbarLogado(
   if (!dashboardLi) {
     const newDashboardLi = document.createElement("li");
     const newDashboardLink = document.createElement("a");
-    newDashboardLink.href = "/src/pages/dashboard.html";
+    newDashboardLink.href = "src/pages/dashboard.html";
     newDashboardLink.textContent = "Dashboard";
     newDashboardLink.className = "dashboardBtn";
     newDashboardLi.appendChild(newDashboardLink);
@@ -108,7 +108,7 @@ function atualizaNavbarDeslogado(
   if (!cadastroLi) {
     const newCadastroLi = document.createElement("li");
     const newCadastroLink = document.createElement("a");
-    newCadastroLink.href = "/src/pages/cadastro.html";
+    newCadastroLink.href = "src/pages/cadastro.html";
     newCadastroLink.textContent = "Cadastre-se";
     newCadastroLi.appendChild(newCadastroLink);
     navLinks.appendChild(newCadastroLi);
@@ -116,7 +116,7 @@ function atualizaNavbarDeslogado(
   if (!corretorLi) {
     const newCorretorLi = document.createElement("li");
     const newCorretorLink = document.createElement("a");
-    newCorretorLink.href = "/src/pages/corretor.html";
+    newCorretorLink.href = "src/pages/corretor.html";
     newCorretorLink.textContent = "Área do Corretor";
     newCorretorLink.className = "loginBtn";
     newCorretorLi.appendChild(newCorretorLink);
