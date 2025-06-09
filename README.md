@@ -1,37 +1,19 @@
 # VitaSeg - Corretora de Planos de Saúde
 
-![pagina-inicial](https://github.com/user-attachments/assets/e38b5eac-9489-4520-b1d2-0a9af050019c)
+![pagina-inicial](/src/img/pagina-inicial.PNG)
 
 > Este projeto é um site para uma corretora de planos de saúde, desenvolvido como parte da disciplina de Programação Web na faculdade. O objetivo é oferecer aos usuários informações e funcionalidades relacionadas à contratação de planos de saúde, com armazenamento de dados no navegador via localStorage.
 
-## 📦 Como rodar o projeto localmente
+## 🌐 Acesse o Projeto Online
 
-Para visualizar e testar o site da VitaSeg em seu computador, siga as etapas abaixo:
+Você pode acessar o site da VitaSeg diretamente pelo GitHub Pages, sem a necessidade de clonar o repositório
 
-## Passo 1: Clonar o repositório
+👉 **[Acessar o site](https://lucas-fb27.github.io/ProgramacaoWeb/)**
 
-Comece clonando este repositório para sua máquina local. Abra o terminal e execute o seguinte comando:
+## ⚠️ Rodar o Projeto Localmente
 
-```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-```
-
-## Passo 2: Acessar o diretório
-
-Entre na pasta do projeto:
-
-```bash
-cd nome-do-repositorio
-```
-
-
-## Passo 3: Abrir no Navegador
-
-Como se trata de um projeto com HTML, CSS e JavaScript puro, não é necessário instalar dependências ou executar servidores locais.
-
-Basta abrir o arquivo index.html diretamente com seu navegador.
-
->Dica: Para melhor experiência, utilize navegadores como Google Chrome ou Mozilla Firefox.
+Temporariamente não há a possibilidade de rodar o projeto localmente.
+Enquanto isso, utilize o link acima para visualizar e interagir com o site normalmente.
 
 ### Tecnologias Utilizadas
 
